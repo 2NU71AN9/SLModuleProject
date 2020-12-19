@@ -6,21 +6,17 @@
 //
 
 import UIKit
-import SLProjectModuleComm
+import AAA
 
-class ViewController: BaseViewController {
-    
-    required convenience init() {
-        fatalError("init() has not been implemented")
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
     }
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        // Do any additional setup after loading the view.
-//    }
-    
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let vc = SLViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        let vc = TestViewController()
+        present(vc, animated: true, completion: nil)
     }
 }

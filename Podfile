@@ -34,7 +34,7 @@ end
 
 ## 通用模块
 target 'SLProjectModuleComm' do
-project 'SLProjectModuleComm/SLProjectModuleComm.xcworkspace'
+project 'SLProjectModuleComm/SLProjectModuleComm.xcodeproj'
 
   #友盟
   pod 'UMCCommon'
