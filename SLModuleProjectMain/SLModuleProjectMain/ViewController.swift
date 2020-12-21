@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let vc = TestViewController()
-        present(vc, animated: true, completion: nil)
+//        let vc = TestViewController()
+//        present(vc, animated: true, completion: nil)
     }
 }

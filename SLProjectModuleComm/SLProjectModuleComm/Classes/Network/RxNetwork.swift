@@ -66,7 +66,7 @@ extension Observable where Element == NetworkResponse {
     }
 
     /// 查看是成功, 过滤失败
-    public func isSuccess(_ complete: Complete) -> Observable<Element> {
+    public func isSuccess(_ complete: ((Element) -> Void)?) -> Observable<Element> {
         map { response in
             if response.code == HttpCode.success.rawValue {
                 complete?(response)
@@ -80,7 +80,7 @@ extension Observable where Element == NetworkResponse {
     }
 
     /// 查看是失败, 过滤失败
-    public func isFailure(_ complete: Complete) -> Observable<Element> {
+    public func isFailure(_ complete: ((Element) -> Void)?) -> Observable<Element> {
         map { response in
             if response.code != HttpCode.success.rawValue {
                 complete?(response)

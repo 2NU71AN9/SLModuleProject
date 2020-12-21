@@ -1,8 +1,8 @@
 platform :ios, '11.0'
+inhibit_all_warnings!
+use_frameworks!
 
-target 'SLProjectModuleComm' do
-  use_frameworks!
-
+def dtPods
   pod 'SLSupportLibrary'
   pod 'IQKeyboardManagerSwift'
   pod 'SVProgressHUD'
@@ -34,5 +34,12 @@ target 'SLProjectModuleComm' do
   
   #Bugly
   pod 'Bugly'
+end
 
+target 'SLProjectModuleComm' do
+  dtPods
+end
+
+target 'ModuleComm' do
+  dtPods
 end
